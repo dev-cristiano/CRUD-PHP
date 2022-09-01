@@ -1,0 +1,33 @@
+a.btn.btn-new{
+    background: #1cc88a;
+    width: 25px;
+    border-radius: 5px;
+    height: 30px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+a.btn.btn-new i{
+    margin-top: 3px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.btn.btn-delete{
+    background: #dc3545;
+    width: 25px;
+    border-radius: 5px;
+    height: 30px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+a.btn.btn-delete i{
+    margin-top: 3px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

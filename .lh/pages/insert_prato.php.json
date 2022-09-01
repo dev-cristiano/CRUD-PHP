@@ -1,0 +1,126 @@
+{
+    "sourceFile": "pages/insert_prato.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1661469194707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1661469204058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,8 @@\n <?php\r\n+    include 'conexao.php';\r\n \r\n \r\n+    \r\n \r\n+\r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469212045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <?php\r\n     include 'conexao.php';\r\n \r\n \r\n-    \r\n+    if(isset($_GET['id'])){\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469220997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,10 @@\n <?php\r\n     include 'conexao.php';\r\n \r\n \r\n-    if(isset($_GET['id'])){\r\n+    if(isset($_GET['salvar'])){\r\n+        \r\n+    }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469227127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n     include 'conexao.php';\r\n \r\n \r\n     if(isset($_GET['salvar'])){\r\n-        \r\n+\r\n+        $\r\n     }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469234110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n \r\n     if(isset($_GET['salvar'])){\r\n \r\n+        $nomePrato = $_GET['nomePrato'];\r\n         $\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469256825,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n \r\n     if(isset($_GET['salvar'])){\r\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n-        $\r\n+        $valorPrato = $_GET['valorPrato'];\r\n+\r\n+        \r\n     }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469264216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n-        \r\n+        if(i)\r\n     }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469272202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n-        if(i)\r\n+        if(isset($_GET['salvar'])\r\n     }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469285256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,11 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n-        if(isset($_GET['salvar'])\r\n+        if(isset($_GET['salvar'])){\r\n+            $sql = \r\n+        }\r\n     }\r\n \r\n \r\n ?>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1661469292761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $sql = \r\n+            $insert = \"INSERT INTO\"\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469301975,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO\"\r\n+            $insert = \"INSERT INTO prato \"\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469312518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO prato \"\r\n+            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES\"\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469318944,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES\"\r\n+            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('','')\"\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469337743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('','')\"\r\n+            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n+            \r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469355773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n-            \r\n+            $\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469363111,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n-            $\r\n+            \r\n+            mysql\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469368453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,10 @@\n \r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n             \r\n-            mysql\r\n+            mysqli_query($conn, $insert);\r\n+            \r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469375207,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n-            \r\n+             header('Location: prato.php')\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469387723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n-             header('Location: prato.php')\r\n+             header('Location: grid_prato.php');\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469398677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n              header('Location: grid_prato.php');\r\n+\r\n+            close\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469404226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n             \r\n             mysqli_query($conn, $insert);\r\n              header('Location: grid_prato.php');\r\n \r\n-            close\r\n+            mysql\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469410320,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n-             header('Location: grid_prato.php');\r\n+            header('Location: grid_prato.php');\r\n \r\n-            mysql\r\n+            mysqli_close($conn);\r\n         }\r\n     }\r\n \r\n \r\n"
+                },
+                {
+                    "date": 1661469445994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato')\";\r\n+            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato', NOW)\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n             header('Location: grid_prato.php');\r\n \r\n"
+                },
+                {
+                    "date": 1661469574340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n         if(isset($_GET['salvar'])){\r\n-            $insert = \"INSERT INTO prato (nomePrato, valorPrato) VALUES ('$nomePrato', '$valorPrato', NOW)\";\r\n+            $insert = \"INSERT INTO prato (nomePrato, valorPrato, data_includao) VALUES ('$nomePrato', '$valorPrato', NOW())\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n             header('Location: grid_prato.php');\r\n \r\n"
+                },
+                {
+                    "date": 1661469931936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,10 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n+        echo \r\n+\r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato, data_includao) VALUES ('$nomePrato', '$valorPrato', NOW())\";\r\n             \r\n             mysqli_query($conn, $insert);\r\n"
+                },
+                {
+                    "date": 1661469938502,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n-        echo \r\n+        echo $nomePrato <br> $\r\n \r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato, data_includao) VALUES ('$nomePrato', '$valorPrato', NOW())\";\r\n             \r\n"
+                },
+                {
+                    "date": 1661469945403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n         $nomePrato = $_GET['nomePrato'];\r\n         $valorPrato = $_GET['valorPrato'];\r\n \r\n-        echo $nomePrato <br> $\r\n+        echo $nomePrato <br> $valorPrato\";\r\n \r\n         if(isset($_GET['salvar'])){\r\n             $insert = \"INSERT INTO prato (nomePrato, valorPrato, data_includao) VALUES ('$nomePrato', '$valorPrato', NOW())\";\r\n             \r\n"
+                }
+            ],
+            "date": 1661469194707,
+            "name": "Commit-0",
+            "content": "<?php\r\n\r\n\r\n\r\n?>"
+        }
+    ]
+}

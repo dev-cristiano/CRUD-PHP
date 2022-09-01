@@ -1,0 +1,18 @@
+{
+    "sourceFile": "pages/insert_pedido.php",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1661108038831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1661108038831,
+            "name": "Commit-0",
+            "content": "<?php\r\n    include('conexao.php');\r\n\r\n    if (isset($_POST['salvar'])) {\r\n\r\n        $nome_pedido = mysqli_real_escape_string($conn, $_POST['nome_pedido']);\r\n        $cliente_pedido = mysqli_real_escape_string($conn, $_POST['cliente_pedido']);\r\n        $valor_pedido = $_POST['valor_pedido'];\r\n        $forma_pagamento = $_POST['forma_pagamento'];\r\n        $data_pedido = $_POST['forma_pagamento'];\r\n\r\n        /* echo \"Nome: $nome Senha: $senha Status: $status\"; */\r\n \r\n        if(isset($_POST['salvar'])) {\r\n        \r\n            $insert = \"INSERT INTO pedido (nome_pedido,\tcliente_pedido,\tvalor_pedido, forma_pagamento, data_pedido) VALUES ('$nome_pedido',  '$cliente_pedido', '$valor_pedido', '$forma_pagamento', '$data_pedido')\";\r\n\r\n            mysqli_query($conn, $insert);\r\n\r\n            header('Location: grid_pedido.php');\r\n\r\n            mysqli_close($conn);\r\n        }\r\n    }\r\n?>"
+        }
+    ]
+}
